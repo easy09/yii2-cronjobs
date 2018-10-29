@@ -1,5 +1,5 @@
 {
-  "name": "will09/yii2-cronjobs",
+  "name": "willcn/yii2-cronjobs",
   "description": "cronjobs",
   "type": "yii2-extension",
   "keywords": [
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "will09\\cronjobs\\": ""
+      "willnb\\cronjobs\\": ""
     }
   }
 }

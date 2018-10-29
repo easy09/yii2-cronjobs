@@ -17,13 +17,13 @@ Installation
 Either run
 
 ```
-php composer.phar require --prefer-dist will09/yii2-cronjobs "dev-master"
+php composer.phar require --prefer-dist willcn/yii2-cronjobs "dev-master"
 ```
 
 or add
 
 ```
-"will09/yii2-cronjobs": "dev-master"
+"willcn/yii2-cronjobs": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
@@ -37,7 +37,7 @@ Yii::setAlias('@runnerScript', dirname(__DIR__) .'/yii');
 ```
 'controllerMap' => [
        'cron' => [
-           'class' => 'will09\cronjobs\CronController'
+           'class' => 'willcn\cronjobs\CronController'
        ],
    ],
 ```
