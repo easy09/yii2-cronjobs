@@ -2,14 +2,12 @@ Yii2 cronjobs extension
 ========
 Easiest way to put crontab on your console scripts.
 
-This extension is based on [this](https://github.com/Yiivgeny/Yii-PHPDocCrontab).
-Thanks [Yiivgeny](https://github.com/Yiivgeny).
+This extension is based on [this](https://github.com/DenisOgr/yii2-cronjobs).
+Thanks [Denis Porplenko](https://github.com/DenisOgr).
 
 But with a few changes:
-- Work eith yii2
-- Set config in params (not in phpDocs).
+- support php 7.*
 
-I transfer ​​settings of crontab in local settings(params) configuration, so that the application can be run on different servers with different sets of crontab.
 
 Installation
 ------------
@@ -19,13 +17,13 @@ Installation
 Either run
 
 ```
-php composer.phar require --prefer-dist denisogr/yii2-cronjobs "dev-master"
+php composer.phar require --prefer-dist will09/yii2-cronjobs "dev-master"
 ```
 
 or add
 
 ```
-"denisogr/yii2-cronjobs": "dev-master"
+"will09/yii2-cronjobs": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
@@ -39,7 +37,7 @@ Yii::setAlias('@runnerScript', dirname(__DIR__) .'/yii');
 ```
 'controllerMap' => [
        'cron' => [
-           'class' => 'denisog\cronjobs\CronController'
+           'class' => 'will09\cronjobs\CronController'
        ],
    ],
 ```

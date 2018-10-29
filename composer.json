@@ -1,22 +1,26 @@
 {
-	"name": "denisogr/yii2-cronjobs",
-	"description": "cronjobs",
-	"type": "yii2-extension",
-	"keywords": ["yii2","extension","cronjobs"],
-	"license": "BSD-3-Clause",
-	"authors": [
-		{
-			"name": "Denis Porplenko",
-			"email": "denis.porplenko@gmail.com"
-		}
-	],
-	"minimum-stability": "dev",
-	"require": {
-        	"yiisoft/yii2": "*"
-    	},
-	"autoload": {
-		"psr-4": {
-			"denisog\\cronjobs\\": ""
-		}
-	}
+  "name": "will09/yii2-cronjobs",
+  "description": "cronjobs",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension",
+    "cronjobs"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Will Lin",
+      "email": "will@cn09.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "will09\\cronjobs\\": ""
+    }
+  }
 }
