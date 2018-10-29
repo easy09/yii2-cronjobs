@@ -5,7 +5,7 @@
  * Time: 14:51
  */
 
-namespace will09\cronjobs;
+namespace willcn\cronjobs;
 
 use Yii;
 use yii\console\Controller;
