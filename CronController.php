@@ -77,7 +77,7 @@ class CronController extends Controller
         }
         //Checking logs directory
         if ($this->logsDir === null) {
-            $this->logsDir = Yii::$app->getRuntimePath();
+            $this->logsDir = Yii::$app->getRuntimePath() . '/logs';
         }
         //Checking bootstrap script
         if ($this->bootstrapScript === null) {
@@ -186,12 +186,14 @@ RAW;
     protected function runCommandBackground($command, $stdout, $stderr)
     {
         $concat = ($this->updateLogFile) ? ' >>' : ' >';
+        if ($this->isWindowsOS() && $stdout == '/dev/null') {
+            $stdout = 'nul';
+        }
         $command =
             $this->interpreterPath . ' ' .
             $command .
             $concat . escapeshellarg($stdout) .
             ' 2>' . (($stdout === $stderr) ? '&1' : escapeshellarg($stderr));
-
         if ($this->isWindowsOS()) {
             //Windows OS
             pclose(popen('start /B "Yii run command" ' . $command, 'r'));
@@ -241,12 +243,14 @@ RAW;
                 if (isset($task['docs']['stdout'])) $stdout = $task['docs']['stdout'];
                 else                                $stdout = $this->logFileName;
 
+
                 $stdout = $this->formatFileName($stdout, $task);
                 if (!is_writable($this->logsDir)) {
                     $stdout = '/dev/null';
                 }
 
                 $stderr = isset($task['docs']['stderr']) ? $this->formatFileName($task['docs']['stderr'], $task) : $stdout;
+
                 if (!is_writable($stderr)) {
                     $stdout = '/dev/null';
                 }
