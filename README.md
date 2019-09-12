@@ -1,3 +1,6 @@
+### Don't use it!
+### This library is not complate!
+### 不要使用这个库，这只是一个应急作品，由于应用的项目已部署到客户的生产环境无法撤回，所以被迫保留。有已知BUG并且我不会再花时间更新它。
 Yii2 cronjobs extension
 ========
 Easiest way to put crontab on your console scripts.
